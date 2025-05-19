@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <style>
+        *{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        /* Basic custom CSS for potential JavaScript interactions */
+        .mobile-menu {
+            display: none; 
+        }
+        @media (max-width: 767px) { 
+            .mobile-menu {
+                display: block;
+            }
+            .desktop-menu {
+                display: none;
+            }
+        }
+        .customized-bg-gray{
+                background-color: #161722;
+            }
+            .customized-bg-black{
+                background-color: #0D0D0D;
+            }
+            .customized-bg-blue{
+                background-color: #A4DCFF;
+            }
+            .customized-bg-yellow-1{
+                background-color: #FFF5EB;
+            ;
+        }
+        .customized-bg-yellow-2{
+                background-color: #F2C79B;
+        }
+         .customized-bg-yellow-3{
+                background-color: #FFD0A0;
+        }
+         .customized-text-yellow-3{
+                color: #c47d36;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+  <header class="customized-bg-black shadow relative">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-16">
+        </div>
+
+        <!-- Hamburger -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="#" class="text-white hover:text-blue-500">ACCUEIL</a>
+            <a href="#" class="text-white hover:text-blue-500">NOTRE EGLISE</a>
+            <a href="#" class="text-white hover:text-blue-500">PAIN DU JOUR</a>
+            <a href="#" class="text-white hover:text-blue-500">SECTION</a>
+            <a href="#" class="text-white hover:text-blue-500">LIEU DE CULTE</a>
+        </nav>
+
+        <!-- Desktop button -->
+        <div class="hidden md:block">
+            <button class="customized-bg-blue hover:bg-yellow-100 text-black py-3 px-8 rounded-lg">
+                CONTACT
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute z-50 left-0 top-full shadow-md">
+        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">ACCUEIL</a>
+        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">NOTRE EGLISE</a>
+        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">PAIN DU JOUR</a>
+        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">SECTION</a>
+        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">LIEU DE CULTE</a>
+        <a href="#" class="block py-2 px-4 text-blue-500 hover:bg-yellow-200">CONTACT</a>
+    </div>
+</header>
+
+
+    <main class="">
+         <!-- Section 1 -->
+        <section class="relative bg-cover bg-center py-20" style="background-image: url('assets/images/church-interior.png');">
+            <div class="container mx-auto px-4 relative z-10 text-white">
+                <div class="max-w-lg ml-10 -mt-10">
+                    <p class="text-sm uppercase tracking-widest mb-1">ANGONIANY JESOA KRISTY</p>
+                    <p class="text-sm uppercase tracking-widest mb-4">ETO MADAGASIKARA</p>
+                    <h1 class="text-3xl font-bold mb-2">TONGASOA ETO</h1>
+                    <p class="text-3xl font-bold mb-2">AMIN'NY FJKM WAGNER</p>
+                    <p class="text-3xl font-bold mb-8">FINOANA PARIS</p>
+                    <p class="text-sm  text-gray-300">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2 -->
+        <section class="relative bg-cover bg-center mt-10 md:mt-20 py-8 md:py-16" style="background-image: url('assets/images/image_overlay.jpg');">
+            <div class="container mx-auto px-4 relative z-10 flex justify-center">
+                <div class="w-full max-w-xl text-center">
+                    <img src="assets/images/big_concert.png" alt="Affiche concert Rija & Bodo" class="w-full rounded-md shadow-md mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+       <section class="flex flex-col items-center justify-center p-8 md:p-12 lg:p-16 bg-white">
+            <div class="text-center mb-8">
+                <p class="text-xs uppercase tracking-wider text-gray-600">NOUVELLE DE L'ÉGLISE</p>
+                <h1 class="text-2xl font-bold uppercase mt-1">VAOVAO MPEGONANA</h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl mt-12">
+                <!-- CARD 1 -->
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="assets/images/man_prying.png"
+                            alt="Man praying"
+                            class="w-full h-64 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="transform hover:scale-105 transition-transform duration-300 md:mt-12">
+                    <div class="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="assets/images/man_and_women_reading_a_book.png"
+                            alt="People reading scripture"
+                            class="w-full h-80 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="assets/images/people_sitting_on_brown_pews.png"
+                            alt="Church service"
+                            class="w-full h-64 object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w-4xl mt-1 pt-4">
+                <button
+                    class="px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-full transform hover:scale-105 transition-all duration-300 flex items-center mx-auto"
+                >
+                    <span class="material-symbols-outlined mr-2">menu_book</span> Read more news
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+    <section class="py-12 bg-[#F5F2F0]">
+    <div class="container mx-auto px-4 text-center mb-12">
+        <p class="text-sm uppercase text-gray-500 tracking-widest">NOUVELLES DES</p>
+        <p class="text-sm uppercase text-gray-500 tracking-widest mb-2">SECTION</p>
+        <h2 class="text-3xl font-bold text-gray-800">VAOVAO SAMPANA</h2>
+    </div>
+
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Carte 1 -->
+        <div class="relative shadow-md overflow-hidden w-full">
+            <img src="assets/images/fashion_man_love_people.png" alt="Hands Praying" class="w-full h-72 object-cover">
+            <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+            <div class="absolute inset-x-0 bottom-6 px-4 z-10 text-white ">
+                <h3 class="text-lg font-semibold mb-2">WATCH AND LISTEN TO <br> OUR SERMONS</h3>
+                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="relative shadow-md overflow-hidden w-full">
+            <img src="assets/images/statue_holding_a_holy_book.png" alt="Bible with Cross" class="w-full h-72 object-cover">
+            <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+            <div class="absolute inset-x-0 bottom-6 px-4 z-10 text-white">
+                <h3 class="text-lg font-semibold mb-2">WATCH AND LISTEN TO OUR SERMONS</h3>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="relative shadow-md overflow-hidden w-full">
+            <img src="assets/images/man_people_women_connection.png" alt="Pastor Reading" class="w-full h-72 object-cover">
+            <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+            <div class="absolute inset-x-0 bottom-6 px-4 z-10 text-white">
+                <h3 class="text-lg font-semibold mb-2">WATCH AND LISTEN TO OUR SERMONS</h3>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="relative shadow-md overflow-hidden w-full">
+            <img src="assets/images/women_in_a_blue_tank_top_and_man_in_red_shirt_painting.png" alt="Stained Glass" class="w-full h-72 object-cover">
+            <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+            <div class="absolute inset-x-0 bottom-6 px-4 z-10 text-white">
+                <h3 class="text-lg font-semibold mb-2">WATCH AND LISTEN TO OUR SERMONS</h3>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Section 5 et Section 6 -->
+      <div class="flex flex-col w-full bg-white">
+                <div class="w-full">
+                    <div class="text-center py-8">
+                        <p class="text-xs uppercase tracking-widest mb-2">NOVELS</p>
+                        <h1 class="text-2xl font-bold uppercase tracking-wider">SPVFA37 SY FOIBE FJKM</h1>
+                    </div>
+                    <!-- Section 5 -->
+                    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                        <div class="customized-bg-yellow-1 ">
+                            <div class="flex p-8 flex-col mx-auto max-w-xs">
+                                <div class="w-12 h-12 customized-bg-blue rounded-full flex items-center justify-center mb-6">
+                                    <span class="material-symbols-outlined text-black">
+                                            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M25.7559 6.18744C25.2219 6.20092 24.6974 6.3171 24.218 6.52808C23.1835 6.99106 22.6138 7.86894 22.6138 8.99994V11.7669L21.606 12.669C21.407 11.4915 20.2883 10.8112 20.2392 10.7819C20.1183 10.7098 19.9733 10.6774 19.8287 10.6902C19.6841 10.703 19.549 10.7603 19.4463 10.8522L14.4189 15.3522C14.3011 15.4577 14.2349 15.6008 14.2349 15.7499V23.2499C14.2349 23.3991 14.3011 23.5422 14.4189 23.6477C14.5368 23.7532 14.6966 23.8124 14.8633 23.8124C15.0299 23.8124 15.1898 23.7532 15.3076 23.6477C15.4255 23.5422 15.4917 23.3991 15.4917 23.2499V15.983L19.9126 12.0257C20.1164 12.2343 20.3349 12.5389 20.3735 12.91C20.4277 13.4337 20.1158 14.003 19.4465 14.6022L16.9329 16.8522C16.8166 16.9579 16.7517 17.1006 16.7524 17.2489C16.7531 17.3973 16.8192 17.5395 16.9365 17.6444C17.0537 17.7493 17.2125 17.8085 17.3783 17.8091C17.5441 17.8098 17.7034 17.7517 17.8216 17.6476L20.3352 15.3976L23.6868 12.3976C23.8045 12.2921 23.8707 12.1491 23.8706 11.9999V8.99994C23.8706 8.29986 24.1576 7.8252 24.7481 7.54888C24.8696 7.49255 24.9965 7.44636 25.1274 7.41088V13.296L21.0836 17.6396C20.9895 17.7408 20.9379 17.8683 20.938 17.9999V23.2499C20.938 23.3991 21.0042 23.5422 21.122 23.6477C21.2399 23.7532 21.3997 23.8124 21.5664 23.8124C21.7331 23.8124 21.8929 23.7532 22.0108 23.6477C22.1286 23.5422 22.1948 23.3991 22.1948 23.2499V18.2036L26.2386 13.86C26.3327 13.7589 26.3843 13.6315 26.3843 13.4999V6.74994C26.3843 6.60075 26.3181 6.45768 26.2002 6.35219C26.0824 6.2467 25.9225 6.18744 25.7559 6.18744Z" fill="#161722"/>
+                                                <path d="M6.92872 10.8522C6.826 10.7603 6.69087 10.703 6.54631 10.6902C6.40175 10.6774 6.25669 10.7098 6.13581 10.7819C6.08669 10.8112 4.968 11.4915 4.769 12.669L3.76123 11.7669V8.99994C3.76123 7.86894 3.19152 6.99106 2.15704 6.52808C1.67764 6.3171 1.15314 6.20092 0.619141 6.18744C0.452474 6.18744 0.292633 6.2467 0.174782 6.35219C0.0569308 6.45768 -0.00927734 6.60075 -0.00927734 6.74994V13.4999C-0.0092798 13.6315 0.042254 13.7589 0.136359 13.86L4.18018 18.2036V23.2499C4.18018 23.3991 4.24638 23.5422 4.36423 23.6477C4.48209 23.7532 4.64193 23.8124 4.80859 23.8124C4.97526 23.8124 5.1351 23.7532 5.25295 23.6477C5.3708 23.5422 5.43701 23.3991 5.43701 23.2499V17.9999C5.43701 17.8684 5.38548 17.7409 5.29138 17.6398L1.24756 13.2963V7.4113C1.36697 7.44358 1.48315 7.48472 1.59492 7.5343C2.20689 7.80819 2.50439 8.28744 2.50439 8.99994V11.9999C2.5044 12.1491 2.57062 12.2922 2.68847 12.3977L6.04003 15.3977L8.5537 17.6477C8.67188 17.7517 8.83121 17.8098 8.99699 17.8092C9.16277 17.8086 9.32156 17.7494 9.43879 17.6444C9.55601 17.5395 9.62217 17.3974 9.62284 17.249C9.62352 17.1006 9.55866 16.958 9.44239 16.8522L6.92872 14.6022C6.2594 14.003 5.9475 13.4337 6.0018 12.91C6.04019 12.5387 6.25893 12.234 6.46264 12.0257L10.8833 15.983V23.2499C10.8833 23.3991 10.9495 23.5422 11.0674 23.6477C11.1852 23.7532 11.3451 23.8124 11.5117 23.8124C11.6784 23.8124 11.8382 23.7532 11.9561 23.6477C12.0739 23.5422 12.1401 23.3991 12.1401 23.2499V15.7499C12.1401 15.6008 12.0739 15.4577 11.9561 15.3522L6.92872 10.8522Z" fill="#161722"/>
+                                                <path d="M9.83594 5.0625H11.3022V10.5C11.3022 10.6492 11.3685 10.7923 11.4863 10.8977C11.6042 11.0032 11.764 11.0625 11.9307 11.0625H14.4443C14.611 11.0625 14.7708 11.0032 14.8887 10.8977C15.0065 10.7923 15.0728 10.6492 15.0728 10.5V5.0625H16.5391C16.7057 5.0625 16.8656 5.00324 16.9834 4.89775C17.1013 4.79226 17.1675 4.64918 17.1675 4.5V3C17.1675 2.85082 17.1013 2.70774 16.9834 2.60225C16.8656 2.49676 16.7057 2.4375 16.5391 2.4375H15.0728V0.75C15.0728 0.600816 15.0065 0.457742 14.8887 0.352252C14.7708 0.246763 14.611 0.1875 14.4443 0.1875H11.9307C11.764 0.1875 11.6042 0.246763 11.4863 0.352252C11.3685 0.457742 11.3022 0.600816 11.3022 0.75V2.4375H9.83594C9.66927 2.4375 9.50943 2.49676 9.39158 2.60225C9.27373 2.70774 9.20752 2.85082 9.20752 3V4.5C9.20752 4.64918 9.27373 4.79226 9.39158 4.89775C9.50943 5.00324 9.66927 5.0625 9.83594 5.0625ZM10.4644 3.5625H11.9307C12.0973 3.5625 12.2572 3.50324 12.375 3.39775C12.4929 3.29226 12.5591 3.14918 12.5591 3V1.3125H13.8159V3C13.8159 3.14918 13.8821 3.29226 14 3.39775C14.1178 3.50324 14.2777 3.5625 14.4443 3.5625H15.9106V3.9375H14.4443C14.2777 3.9375 14.1178 3.99676 14 4.10225C13.8821 4.20774 13.8159 4.35082 13.8159 4.5V9.9375H12.5591V4.5C12.5591 4.35082 12.4929 4.20774 12.375 4.10225C12.2572 3.99676 12.0973 3.9375 11.9307 3.9375H10.4644V3.5625Z" fill="#161722"/>
+                                                <path d="M19.2622 3.75C19.2622 3.89918 19.3284 4.04226 19.4463 4.14775C19.5641 4.25324 19.724 4.3125 19.8906 4.3125H20.7285C20.8952 4.3125 21.055 4.25324 21.1729 4.14775C21.2907 4.04226 21.3569 3.89918 21.3569 3.75C21.3569 3.60082 21.2907 3.45774 21.1729 3.35225C21.055 3.24676 20.8952 3.1875 20.7285 3.1875H19.8906C19.724 3.1875 19.5641 3.24676 19.4463 3.35225C19.3284 3.45774 19.2622 3.60082 19.2622 3.75Z" fill="#161722"/>
+                                                <path d="M19.1055 1.68753C19.2157 1.6876 19.324 1.6616 19.4194 1.61216L20.145 1.23716C20.2171 1.20049 20.2803 1.15144 20.3311 1.09281C20.3818 1.03418 20.4192 0.96714 20.4409 0.895549C20.4626 0.823958 20.4683 0.749229 20.4576 0.675666C20.4469 0.602102 20.4201 0.531156 20.3786 0.466913C20.3372 0.402669 20.282 0.346397 20.2161 0.301336C20.1503 0.256275 20.0752 0.223315 19.995 0.204354C19.9149 0.185393 19.8314 0.180805 19.7493 0.190854C19.6672 0.200904 19.5881 0.225392 19.5166 0.26291L18.791 0.63791C18.6712 0.699838 18.5775 0.795429 18.5246 0.909854C18.4717 1.02428 18.4624 1.15114 18.4983 1.27076C18.5341 1.39037 18.613 1.49606 18.7228 1.57142C18.8326 1.64677 18.9672 1.68759 19.1055 1.68753Z" fill="#161722"/>
+                                                <path d="M18.791 6.86216L19.5166 7.23716C19.6608 7.31058 19.8317 7.32994 19.9918 7.29102C20.152 7.2521 20.2884 7.15806 20.3714 7.02942C20.4544 6.90079 20.4771 6.748 20.4347 6.60439C20.3923 6.46079 20.2882 6.33803 20.145 6.26291L19.4194 5.88791C19.3479 5.85039 19.2688 5.8259 19.1867 5.81585C19.1046 5.8058 19.0211 5.81039 18.9409 5.82935C18.8608 5.84831 18.7857 5.88127 18.7198 5.92634C18.654 5.9714 18.5988 6.02767 18.5573 6.09191C18.5159 6.15616 18.4891 6.2271 18.4784 6.30067C18.4677 6.37423 18.4734 6.44896 18.4951 6.52055C18.5168 6.59214 18.5541 6.65918 18.6049 6.71781C18.6557 6.77644 18.7189 6.82549 18.791 6.86216Z" fill="#161722"/>
+                                                <path d="M5.64648 4.3125H6.48438C6.65104 4.3125 6.81088 4.25324 6.92873 4.14775C7.04658 4.04226 7.11279 3.89918 7.11279 3.75C7.11279 3.60082 7.04658 3.45774 6.92873 3.35225C6.81088 3.24676 6.65104 3.1875 6.48438 3.1875H5.64648C5.47982 3.1875 5.31998 3.24676 5.20213 3.35225C5.08427 3.45774 5.01807 3.60082 5.01807 3.75C5.01807 3.89918 5.08427 4.04226 5.20213 4.14775C5.31998 4.25324 5.47982 4.3125 5.64648 4.3125Z" fill="#161722"/>
+                                                <path d="M6.23028 1.23715L6.95589 1.61215C7.02739 1.64967 7.10647 1.67416 7.18858 1.68421C7.27069 1.69426 7.35421 1.68967 7.43433 1.67071C7.51446 1.65175 7.5896 1.61879 7.65543 1.57373C7.72127 1.52867 7.77649 1.47239 7.81793 1.40815C7.85937 1.34391 7.8862 1.27296 7.89688 1.1994C7.90757 1.12583 7.90189 1.0511 7.88017 0.979514C7.85846 0.907923 7.82114 0.840883 7.77036 0.782255C7.71958 0.723627 7.65635 0.674568 7.58431 0.637903L6.8587 0.262903C6.71444 0.189487 6.54359 0.170126 6.38345 0.209044C6.2233 0.247962 6.08685 0.342001 6.00388 0.470637C5.9209 0.599274 5.89814 0.752066 5.94055 0.89567C5.98297 1.03927 6.08712 1.16203 6.23028 1.23715Z" fill="#161722"/>
+                                                <path d="M6.95603 5.88791L6.23042 6.26291C6.15837 6.29958 6.09514 6.34863 6.04436 6.40726C5.99359 6.46589 5.95627 6.53293 5.93455 6.60452C5.91284 6.67611 5.90716 6.75084 5.91784 6.8244C5.92852 6.89797 5.95535 6.96891 5.99679 7.03316C6.03823 7.0974 6.09346 7.15367 6.15929 7.19873C6.22513 7.2438 6.30027 7.27676 6.38039 7.29572C6.46051 7.31468 6.54404 7.31927 6.62615 7.30922C6.70826 7.29917 6.78734 7.27468 6.85883 7.23716L7.58445 6.86216C7.65649 6.8255 7.71972 6.77644 7.7705 6.71781C7.82128 6.65918 7.8586 6.59214 7.88031 6.52055C7.90203 6.44896 7.90771 6.37423 7.89702 6.30067C7.88634 6.2271 7.85951 6.15616 7.81807 6.09191C7.77663 6.02767 7.72141 5.9714 7.65557 5.92634C7.58974 5.88128 7.5146 5.84832 7.43447 5.82935C7.35435 5.81039 7.27083 5.8058 7.18872 5.81585C7.10661 5.8259 7.02753 5.85039 6.95603 5.88791Z" fill="#161722"/>
+                                            </svg>
+                                    </span>
+                                </div>
+                                <h2 class="font-bold mb-3 uppercase">ABOUT US</h2>
+                                <p class="text-sm">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+
+                        <div class="customized-bg-blue h-4 flex"></div>
+                        </div>
+                          <div class="customized-bg-yellow-1 ">
+                            <div class="flex p-8 flex-col mx-auto max-w-xs">
+                                <div class="w-12 h-12 customized-bg-blue rounded-full flex items-center justify-center mb-6">
+                                    <span class="material-symbols-outlined text-black">
+                                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_68_1557)">
+                                                <path d="M15.1641 9.79071C13.187 9.79071 11.5786 11.2305 11.5786 13.0001C11.5786 14.7697 13.1871 16.2094 15.1641 16.2094C17.1411 16.2094 18.7495 14.7697 18.7495 13.0001C18.7495 11.2305 17.1411 9.79071 15.1641 9.79071ZM15.1641 14.686C14.1255 14.686 13.2806 13.9297 13.2806 13.0001C13.2806 12.0705 14.1255 11.3141 15.1641 11.3141C16.2026 11.3141 17.0476 12.0705 17.0476 13.0001C17.0476 13.9297 16.2027 14.686 15.1641 14.686Z" fill="#161722"/>
+                                                <path d="M8.67928 7.19557L7.47582 6.11835C5.41922 7.95922 4.28662 10.4032 4.28662 13.0001C4.28662 15.597 5.41922 18.041 7.47588 19.8818L8.67934 18.8046C6.94413 17.2515 5.98859 15.1901 5.98859 13.0001C5.98859 10.8102 6.94413 8.74871 8.67928 7.19557Z" fill="#161722"/>
+                                                <path d="M6.1024 4.88888L4.899 3.81171C2.15293 6.26967 0.640625 9.53282 0.640625 13C0.640625 16.4672 2.15293 19.7304 4.899 22.1883L6.10246 21.1111C3.6779 18.9409 2.34259 16.0603 2.34259 13C2.34259 9.93973 3.6779 7.05917 6.1024 4.88888Z" fill="#161722"/>
+                                                <path d="M25.429 3.81171L24.2256 4.88893C26.6501 7.05917 27.9855 9.93973 27.9855 13C27.9855 16.0603 26.6501 18.9409 24.2256 21.1112L25.4291 22.1884C28.1751 19.7304 29.6874 16.4672 29.6874 13C29.6874 9.53282 28.1751 6.26967 25.429 3.81171Z" fill="#161722"/>
+                                                <path d="M22.8522 6.11835L21.6487 7.19557C23.3839 8.74871 24.3394 10.8102 24.3394 13.0001C24.3394 15.1901 23.3838 17.2515 21.6487 18.8046L22.8521 19.8818C24.9087 18.041 26.0414 15.597 26.0414 13.0001C26.0414 10.4032 24.9088 7.95922 22.8522 6.11835Z" fill="#161722"/>
+                                                <path d="M20.2753 8.42474L19.0718 9.50197C20.1176 10.438 20.6935 11.6803 20.6935 12.9999C20.6935 14.3195 20.1176 15.5617 19.0718 16.4978L20.2753 17.575C21.6425 16.3512 22.3954 14.7264 22.3954 12.9999C22.3955 11.2733 21.6425 9.64852 20.2753 8.42474Z" fill="#161722"/>
+                                                <path d="M11.2563 9.50197L10.0528 8.42474C8.68557 9.64852 7.93262 11.2733 7.93262 12.9999C7.93262 14.7264 8.68557 16.3512 10.0528 17.575L11.2563 16.4978C10.2105 15.5617 9.63458 14.3195 9.63458 12.9999C9.63458 11.6803 10.2105 10.438 11.2563 9.50197Z" fill="#161722"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_68_1557">
+                                                <rect width="29.0469" height="26" fill="white" transform="translate(0.640625)"/>
+                                                </clipPath>
+                                                </defs>
+                                             </svg>
+                                    </span>
+                                </div>
+                                <h2 class="font-bold mb-3 uppercase">GET INVOLVED</h2>
+                                <p class="text-sm text-gray-600">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                         <div class="customized-bg-blue h-4 flex"></div>
+                     </div>
+                          <div class="customized-bg-yellow-1 ">
+                            <div class="flex p-8 flex-col mx-auto max-w-xs">
+                                <div class="w-12 h-12 customized-bg-blue rounded-full flex items-center justify-center mb-6">
+                                    <span class="material-symbols-outlined text-black">
+                                            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_68_1569)">
+                                                <path d="M20.5975 0.000183105C18.5508 0.000183105 17.3217 1.17535 16.6511 2.16082C15.9804 1.17539 14.7512 0.000183105 12.7046 0.000183105C9.99001 0.000183105 8.03821 2.02096 8.03821 4.47923C8.03821 7.14748 10.3509 8.87586 13.8517 11.4921C15.9803 13.0828 16.1582 13.2438 16.6511 13.621C17.1862 13.2237 17.3478 13.0185 19.7671 11.353C22.3435 9.57933 25.3119 7.4052 25.3119 4.47923C25.3119 2.05052 23.3409 0.000183105 20.5975 0.000183105ZM18.8891 10.3313C18.2067 10.8011 17.4481 11.3233 16.6536 11.9195C15.9972 11.4163 15.3776 10.9532 14.7747 10.5027C11.4719 8.03434 9.4783 6.54447 9.4783 4.47923C9.4783 2.66062 10.8653 1.28922 12.7046 1.28922C14.6968 1.28922 15.5976 2.97841 15.8924 3.70469L16.0646 4.12509H17.2375L17.4097 3.70469C17.7045 2.97845 18.6052 1.28922 20.5974 1.28922C22.4641 1.28922 23.8718 2.66062 23.8718 4.47923C23.8718 6.8981 21.0063 8.87367 18.8891 10.3313Z" fill="#161722"/>
+                                                <path d="M13.806 21.9105C14.2026 21.9696 14.6076 21.9996 15.0096 21.9996C16.7415 21.9996 18.4226 21.4476 19.7437 20.4453L24.5089 16.8758C25.4485 16.1947 25.5844 14.9589 24.8096 14.1268C24.053 13.3143 22.7331 13.1903 21.8046 13.8445L18.715 16.0978C18.5058 16.2537 18.2784 16.3869 18.0381 16.4957C18.0548 16.399 18.0635 16.2999 18.0635 16.199C18.0635 15.1329 17.0945 14.2655 15.9034 14.2655H11.8813C11.3861 13.8488 10.1735 12.9764 8.70293 12.9764C7.22966 12.9764 5.98504 13.8542 5.48279 14.2655H0.734375V20.7106H5.71546L13.806 21.9105ZM3.61456 19.4216H2.17447V15.5545H3.61456V19.4216ZM5.05465 15.5545H6.08863C6.7768 14.908 7.70293 14.2654 8.70288 14.2654C9.69808 14.2654 10.5894 14.8971 11.2613 15.5545H15.9033C16.3004 15.5545 16.6234 15.8436 16.6234 16.199C16.6234 16.5544 16.3004 16.8435 15.9033 16.8435H12.3031V18.1325H16.4117C17.586 18.1325 18.7299 17.7626 19.633 17.0909L22.6993 14.8545C23.0105 14.6382 23.4506 14.6806 23.7032 14.952C23.9638 15.2317 23.9173 15.6474 23.6003 15.8756L18.8142 19.4606C17.7527 20.2667 16.4015 20.7106 15.0096 20.7106C14.6866 20.7106 14.3613 20.6865 14.042 20.6389L5.83393 19.4216H5.05465V15.5545Z" fill="#161722"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_68_1569">
+                                                <rect x="0.734375" width="24.5781" height="22" rx="11" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                             </svg>
+                                    </span>
+                                </div>
+                                <h2 class="font-bold mb-3 uppercase">GIVING BACK</h2>
+                                <p class="text-sm text-gray-600">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        <div class="customized-bg-blue h-4 flex"></div>
+                     </div>
+
+                    </section>
+                    <!-- Section 6 -->
+                     <section>
+                    <div class="text-center mb-12">
+                        <p class="text-xs uppercase tracking-widest mb-2">PERIKOPA FJKM 2025</p>
+                        <h2 class="text-2xl font-bold uppercase tracking-wider">PERIKOPA FJKM 2025</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-32 mb-16" style="margin-left:10%; margin-right:10%;">
+                       <div> 
+                        <div class="customized-bg-yellow-1 p-6 rounded-md transition-transform hover:translate-y-[-5px]">
+                            <p class="text-xs font-semibold uppercase customized-text-yellow-3 mb-3">MITARI-DALANA · NY FANAHY MASINA</p>
+                            <h3 class="font-bold uppercase mb-4">ALA · II MANARAKA NY PASKA</h3>
+                            <div class="mb-3 text-gray-600">
+                                <p class="text-sm"><span class="font-medium">Ezr:</span> 4:1-5</p>
+                                <p class="text-sm"><span class="font-medium">Sal:</span> 4:1-12</p>
+                                <p class="text-sm"><span class="font-medium">Ape:</span> 12:9-12</p>
+                            </div>
+                            <p class="text-xs" style="margin-top:30%;">Dimanche 9 avril, 2025</p>
+                        </div>
+                            <div class="customized-bg-yellow-2 h-4 flex"></div>
+                          </div>  
+                          <div>
+                        <div class="customized-bg-yellow-1 p-6 rounded-md transition-transform hover:translate-y-[-5px]">
+                            <p class="text-xs font-semibold uppercase customized-text-yellow-3 mb-3">MITARI-DALANA · NY FANAHY MASINA</p>
+                            <h3 class="font-bold uppercase mb-4">ALA · II MANARAKA NY PASKA</h3>
+                            <div class="mb-3 text-gray-600">
+                                <p class="text-sm"><span class="font-medium">Ezr:</span> 4:1-5</p>
+                                <p class="text-sm"><span class="font-medium">Sal:</span> 4:1-12</p>
+                                <p class="text-sm"><span class="font-medium">Ape:</span> 12:9-12</p>
+                            </div>
+                             <p class="text-xs" style="margin-top:30%;">Dimanche 13 avril, 2025</p>
+                        </div>
+                         <div class="customized-bg-yellow-2 h-4 flex"></div>
+                          </div>
+                        <div>
+                        <div class="customized-bg-yellow-1 p-6 rounded-md transition-transform hover:translate-y-[-5px]">
+                            <p class="text-xs font-semibold uppercase customized-text-yellow-3 mb-3">MITARI-DALANA · NY FANAHY MASINA</p>
+                            <h3 class="font-bold uppercase mb-4">ALA · II MANARAKA NY PASKA</h3>
+                            <div class="mb-3 text-gray-600">
+                                <p class="text-sm"><span class="font-medium">Ezr:</span> 4:1-5</p>
+                                <p class="text-sm"><span class="font-medium">Sal:</span> 4:1-12</p>
+                                <p class="text-sm"><span class="font-medium">Ape:</span> 12:9-12</p>
+                            </div>
+                            <p class="text-xs" style="margin-top:30%;">Dimanche 20 avril, 2025</p>
+                        </div>
+                        <div class="customized-bg-yellow-2 h-4 flex"></div>
+                          </div>
+                    </div>
+                    </section>
+                </div>
+            </div>
+
+    </main>
+
+   <footer class="customized-bg-gray text-white py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Colonne gauche -->
+        <div>
+            <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-12 mb-4">
+            <p class="text-sm text-gray-300">© COPYRIGHT ANTHONY</p>
+            <p class="text-sm text-gray-300">2025</p>
+            <p class="text-sm text-gray-300 mt-2">(+33) 6.70.56.66.96</p>
+            <p class="text-sm text-gray-300">7 BIS RUE PASTEUR WAGNER 75011</p>
+            <p class="text-sm text-gray-300">YVESRAHOLIARISON@GMAIL.COM</p>
+        </div>
+
+        <!-- Colonne centre (2 blocs imbriqués) -->
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Lien rapide -->
+            <div>
+                <h3 class="text-lg mb-2">Lien Rapide</h3>
+                <ul class="list-none space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">NOTRE EGLISE</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">SECTIONS</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">PAIN DU JOUR</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div>
+                <h3 class="text-md mb-2">Connect</h3>
+                <div class="flex items-center">
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.36 8C15.36 3.58172 11.9215 0 7.68 0C3.43845 0 0 3.58172 0 8C0 11.993 2.80845 15.3027 6.48 15.9028V10.3125H4.53V8H6.48V6.2375C6.48 4.2325 7.6266 3.125 9.38085 3.125C10.2208 3.125 11.1 3.28125 11.1 3.28125V5.25H10.1316C9.1776 5.25 8.88 5.86672 8.88 6.5V8H11.01L10.6695 10.3125H8.88V15.9028C12.5515 15.3027 15.36 11.993 15.36 8Z" fill="#A4DCFF"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colonne droite -->
+        <div>
+            <h3 class="text-xl font-semibold mb-5">SOUSCRIRE AUX <br> NEWSLETTER</h3>
+            <form class="flex flex-col sm:flex-row gap-2">
+                <input 
+                    type="email" 
+                    class="bg-transparent text-white rounded-md border border-gray-700 py-4 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-300" 
+                    placeholder="your@email.com"
+                />
+                <button class="customized-bg-blue hover:bg-yellow-100 text-black py-2 px-6 rounded-md">
+                    S'ABONNER
+                </button>
+            </form>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    </script>
+
+</body>
+</html>
