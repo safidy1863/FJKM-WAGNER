@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Eglise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">        
+ </head>
+<body class="">
+
+  <header class="customized-bg-black shadow relative">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-16">
+        </div>
+
+        <!-- Hamburger -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-white hover:text-blue-500">ACCUEIL</a>
+            <a href="our-church.html" class="text-white hover:text-blue-500">NOTRE EGLISE</a>
+            <a href="daily_bread.html" class="text-white hover:text-blue-500">PAIN DU JOUR</a>
+            <a href="section.html" class="text-white hover:text-blue-500">SECTION</a>
+            <a href="#" class="text-white hover:text-blue-500">LIEU DE CULTE</a>
+        </nav>
+
+        <!-- Desktop button -->
+        <div class="hidden md:block">
+            <button class="customized-bg-blue hover:bg-yellow-100 text-black py-3 px-8 rounded-lg">
+                CONTACT
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute z-50 left-0 top-full shadow-md">
+        <a href="index.html" class="block py-2 px-4 text-black hover:bg-gray-100">ACCUEIL</a>
+        <a href="our-church.html" class="block py-2 px-4 text-black hover:bg-gray-100">NOTRE EGLISE</a>
+        <a href="daily_bread.html" class="block py-2 px-4 text-black hover:bg-gray-100">PAIN DU JOUR</a>
+        <a href="section.html" class="block py-2 px-4 text-black hover:bg-gray-100">SECTION</a>
+        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">LIEU DE CULTE</a>
+        <a href="#" class="block py-2 px-4 text-blue-500 hover:bg-yellow-200">CONTACT</a>
+    </div>
+</header>
+
+
+    <main class="">
+         <!-- Section 1 -->
+      <section class="relative bg-cover bg-center py-24 md:py-36" style="background-image: url('assets/images/church-interior2.png');">
+            <div class="container mx-auto px-4 relative z-10 text-gray-900 flex items-center h-full">
+                <div class="max-w-lg">
+                    <p class="uppercase font-semibold text-sm tracking-widest mb-4">FIANGOANANA</p>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-6">FJKM WAGNER PARIS</h1>
+                    </div>
+            </div>
+        </section>
+        
+        <!-- Section 2 -->
+        <section class="py-12" style="margin-left:10%; margin-right:10%;">
+            <div class="container mx-auto px-4 text-center my-16">
+                <p class="uppercase text-sm text-gray-500 tracking-widest">Notre Histoire</p>
+                <h2 class="text-3xl font-bold text-gray-800">NY TATARA NAY</h2>
+            </div>
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:row-span-1" style="margin:10%;">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 uppercase">LE COMMENCEMENT</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                </div>
+                <div class="overflow-hidden">
+                    <img src="assets/images/our_story1.png" alt="Person Meditating" class="w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="assets/images/our_story2.png" alt="Hands Reading Bible" class="w-full h-64 object-cover">
+                </div>
+                <div class="md:row-span-1" style="margin:10%;">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 uppercase">PASTEUR MAX</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                </div>
+                <div class="md:row-span-1" style="margin:10%;">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 uppercase">DeBut de La FJKM En France</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                </div>
+                <div class="overflow-hidden">
+                    <img src="assets/images/our_story3.png" alt="Our location" class="w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="assets/images/our_story4.png" alt="" class="w-full h-64 object-cover">
+                </div>
+                <div class="md:row-span-1" style="margin:10%;">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 uppercase">PasTEur YVES RAHOLIARSON</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- section 3 -->
+       <section class="flex flex-col items-center justify-center p-8 md:p-12 lg:p-16">
+            <div class="container mx-auto px-4 text-center mb-8">
+                <p class="uppercase text-gray-500 tracking-widest">TONGASOA</p>
+                <h2 class="text-3xl font-bold text-gray-800">ARCHIVE PHOTO</h2>
+            </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl mt-12">
+                <!-- CARD 1 -->
+                <div class="transform hover:scale-105 transition-transform duration-300  md:mt-8">
+                    <div class="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="assets/images/man_prying.png"
+                            alt="Man praying"
+                            class="w-full h-64 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <div class="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="assets/images/man_and_women_reading_a_book.png"
+                            alt="People reading scripture"
+                            class="w-full h-80 object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="transform hover:scale-105 transition-transform duration-300 md:mt-8">
+                    <div class="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img
+                            src="assets/images/people_sitting_on_brown_pews.png"
+                            alt="Church service"
+                            class="w-full h-64 object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 4 -->
+          <section class="container mx-auto px-8 py-12 mb-5">
+                <div class="text-center mb-6">
+                    <p class="text-xs uppercase tracking-wide text-gray-600">MEMBRE DU BUREAU</p>
+                    <h2 class="text-2xl font-bold mt-1">MEMBRE DU BUREAU</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="customized-bg-grey p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                    >
+                        <div class="w-24 h-24 rounded-full bg-white p-1 mb-4 overflow-hidden">
+                            <img
+                                 src="assets/images/member1.jpg"
+                                alt="Portrait of Yves Raholiarison"
+                                class="rounded-full w-full h-full object-cover border-8 border-white"
+                                keywords="man, professional, business, portrait"
+                            />
+                        </div>
+                        <h3 class="font-bold text-lg text-center">YVES <br> RAHOLIARISON</h3>
+                        <p class="text-gray-600 text-sm mt-1">PASTEUR</p>
+                    </div>
+                    <div
+                        class="customized-bg-grey  p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                    >
+                        <div class="w-24 h-24 rounded-full bg-orange-400 p-1 mb-4 overflow-hidden">
+                            <img
+                                src="assets/images/member2.png"
+                                alt="Portrait of Lanto"
+                                class="rounded-full w-full h-full object-cover border-8 border-white"
+                                keywords="woman, smile, professional, portrait"
+                            />
+                        </div>
+                        <h3 class="font-bold text-lg">LANTO</h3>
+                        <p class="text-gray-600 text-sm mt-1">Secretaire</p>
+                    </div>
+                    <div
+                        class="customized-bg-grey  p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                    >
+                        <div class="w-24 h-24 rounded-full bg-white p-1 mb-4 overflow-hidden">
+                            <img
+                                src="assets/images/member3.png"
+                                 alt="Portrait of Mamy"
+                                class="rounded-full w-full h-full object-cover border-8 border-white"
+                                keywords="woman, outdoor, nature, portrait"
+                            />
+                        </div>
+                        <h3 class="font-bold text-lg">MAMY</h3>
+                        <p class="text-gray-600 text-sm mt-1">Tresorier</p>
+                    </div>
+                    <div
+                        class="customized-bg-grey p-6 flex flex-col items-center transition-transform duration-300 hover:scale-105"
+                    >
+                        <div class="w-24 h-24 rounded-full bg-white p-1 mb-4 overflow-hidden">
+                            <img
+                                src="assets/images/member4.png"
+                                alt="Portrait of Santos Payne"
+                                class="rounded-full w-full h-full object-cover border-8 border-white"
+                                keywords="man, professional, portrait"
+                            />
+                        </div>
+                        <h3 class="font-bold text-lg">SANTOS <br> PAYNE</h3>
+                         <p class="text-gray-600 text-sm mt-1">Pastor, Church</p>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+   <footer class="customized-bg-gray text-white py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Colonne gauche -->
+        <div>
+            <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-12 mb-4">
+            <p class="text-sm text-gray-300">© COPYRIGHT ANTHONY</p>
+            <p class="text-sm text-gray-300">2025</p>
+            <p class="text-sm text-gray-300 mt-2">(+33) 6.70.56.66.96</p>
+            <p class="text-sm text-gray-300">7 BIS RUE PASTEUR WAGNER 75011</p>
+            <p class="text-sm text-gray-300">YVESRAHOLIARISON@GMAIL.COM</p>
+        </div>
+
+        <!-- Colonne centre (2 blocs imbriqués) -->
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Lien rapide -->
+            <div>
+                <h3 class="text-lg mb-2">Lien Rapide</h3>
+                <ul class="list-none space-y-2">
+                    <li><a href="our-church.html" class="text-gray-400 hover:text-white">NOTRE EGLISE</a></li>
+                    <li><a href="section.html" class="text-gray-400 hover:text-white">SECTIONS</a></li>
+                    <li><a href="daily_bread.html" class="text-gray-400 hover:text-white">PAIN DU JOUR</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div>
+                <h3 class="text-md mb-2">Connect</h3>
+                <div class="flex items-center">
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.36 8C15.36 3.58172 11.9215 0 7.68 0C3.43845 0 0 3.58172 0 8C0 11.993 2.80845 15.3027 6.48 15.9028V10.3125H4.53V8H6.48V6.2375C6.48 4.2325 7.6266 3.125 9.38085 3.125C10.2208 3.125 11.1 3.28125 11.1 3.28125V5.25H10.1316C9.1776 5.25 8.88 5.86672 8.88 6.5V8H11.01L10.6695 10.3125H8.88V15.9028C12.5515 15.3027 15.36 11.993 15.36 8Z" fill="#A4DCFF"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colonne droite -->
+        <div>
+            <h3 class="text-xl font-semibold mb-5">SOUSCRIRE AUX <br> NEWSLETTER</h3>
+            <form class="flex flex-col sm:flex-row gap-2">
+                <input 
+                    type="email" 
+                    class="bg-transparent text-white rounded-md border border-gray-700 py-4 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-300" 
+                    placeholder="your@email.com"
+                />
+                <button class="customized-bg-blue hover:bg-yellow-100 text-black py-2 px-6 rounded-md">
+                    S'ABONNER
+                </button>
+            </form>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

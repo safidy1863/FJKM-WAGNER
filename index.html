@@ -3,96 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Layout</title>
+    <title>Accueil</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/styles/index.css">
-    <style>
-        *{
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-        /* Basic custom CSS for potential JavaScript interactions */
-        .mobile-menu {
-            display: none; 
-        }
-        @media (max-width: 767px) { 
-            .mobile-menu {
-                display: block;
-            }
-            .desktop-menu {
-                display: none;
-            }
-        }
-        .customized-bg-gray{
-                background-color: #161722;
-            }
-            .customized-bg-black{
-                background-color: #0D0D0D;
-            }
-            .customized-bg-blue{
-                background-color: #A4DCFF;
-            }
-            .customized-bg-yellow-1{
-                background-color: #FFF5EB;
-            ;
-        }
-        .customized-bg-yellow-2{
-                background-color: #F2C79B;
-        }
-         .customized-bg-yellow-3{
-                background-color: #FFD0A0;
-        }
-         .customized-text-yellow-3{
-                color: #c47d36;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
 </head>
 <body class="bg-gray-100">
 
-  <header class="customized-bg-black shadow relative">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-            <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-16">
-        </div>
-
-        <!-- Hamburger -->
-        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-
-        <!-- Desktop menu -->
-        <nav class="hidden md:flex space-x-6">
-            <a href="#" class="text-white hover:text-blue-500">ACCUEIL</a>
-            <a href="#" class="text-white hover:text-blue-500">NOTRE EGLISE</a>
-            <a href="#" class="text-white hover:text-blue-500">PAIN DU JOUR</a>
-            <a href="#" class="text-white hover:text-blue-500">SECTION</a>
-            <a href="#" class="text-white hover:text-blue-500">LIEU DE CULTE</a>
-        </nav>
-
-        <!-- Desktop button -->
-        <div class="hidden md:block">
-            <button class="customized-bg-blue hover:bg-yellow-100 text-black py-3 px-8 rounded-lg">
-                CONTACT
+    <header class="customized-bg-black shadow relative">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-16">
+            </div>
+    
+            <!-- Hamburger -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </button>
+    
+            <!-- Desktop menu -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-white hover:text-blue-500">ACCUEIL</a>
+                <a href="our-church.html" class="text-white hover:text-blue-500">NOTRE EGLISE</a>
+                <a href="daily_bread.html" class="text-white hover:text-blue-500">PAIN DU JOUR</a>
+                <a href="section.html" class="text-white hover:text-blue-500">SECTION</a>
+                <a href="#" class="text-white hover:text-blue-500">LIEU DE CULTE</a>
+            </nav>
+    
+            <!-- Desktop button -->
+            <div class="hidden md:block">
+                <button class="customized-bg-blue hover:bg-yellow-100 text-black py-3 px-8 rounded-lg">
+                    CONTACT
+                </button>
+            </div>
         </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute z-50 left-0 top-full shadow-md">
-        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">ACCUEIL</a>
-        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">NOTRE EGLISE</a>
-        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">PAIN DU JOUR</a>
-        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">SECTION</a>
-        <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">LIEU DE CULTE</a>
-        <a href="#" class="block py-2 px-4 text-blue-500 hover:bg-yellow-200">CONTACT</a>
-    </div>
-</header>
-
+    
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute z-50 left-0 top-full shadow-md">
+            <a href="index.html" class="block py-2 px-4 text-black hover:bg-gray-100">ACCUEIL</a>
+            <a href="our-church.html" class="block py-2 px-4 text-black hover:bg-gray-100">NOTRE EGLISE</a>
+            <a href="daily_bread.html" class="block py-2 px-4 text-black hover:bg-gray-100">PAIN DU JOUR</a>
+            <a href="section.html" class="block py-2 px-4 text-black hover:bg-gray-100">SECTION</a>
+            <a href="#" class="block py-2 px-4 text-black hover:bg-gray-100">LIEU DE CULTE</a>
+            <a href="#" class="block py-2 px-4 text-blue-500 hover:bg-yellow-200">CONTACT</a>
+        </div>
+    </header>
 
     <main class="">
          <!-- Section 1 -->
@@ -378,9 +339,9 @@
             <div>
                 <h3 class="text-lg mb-2">Lien Rapide</h3>
                 <ul class="list-none space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white">NOTRE EGLISE</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">SECTIONS</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">PAIN DU JOUR</a></li>
+                    <li><a href="our-church.html" class="text-gray-400 hover:text-white">NOTRE EGLISE</a></li>
+                    <li><a href="section.html" class="text-gray-400 hover:text-white">SECTIONS</a></li>
+                    <li><a href="daily_bread.html" class="text-gray-400 hover:text-white">PAIN DU JOUR</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white">CONTACT</a></li>
                 </ul>
             </div>
@@ -407,7 +368,7 @@
                     class="bg-transparent text-white rounded-md border border-gray-700 py-4 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-300" 
                     placeholder="your@email.com"
                 />
-                <button class="customized-bg-blue hover:bg-yellow-100 text-black py-2 px-6 rounded-md">
+                <button class="btn-primary btn-primary-sm">
                     S'ABONNER
                 </button>
             </form>
@@ -415,15 +376,7 @@
     </div>
 </footer>
 
-
-    <script>
-        const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-    </script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
