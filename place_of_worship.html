@@ -1,215 +1,360 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lieu de culte</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-</head>
-<body class="">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body class="">
     <header class="customized-bg-black shadow relative">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-                <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-16">
-            </div>
-    
-            <!-- Hamburger -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-    
-            <!-- Desktop menu -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="text-white hover:text-blue-500">ACCUEIL</a>
-                <a href="our-church.html" class="text-white hover:text-blue-500">NOTRE EGLISE</a>
-                <a href="daily_bread.html" class="text-white hover:text-blue-500">PAIN DU JOUR</a>
-                <a href="section.html" class="text-white hover:text-blue-500">SECTION</a>
-                <a href="place_of_worship.html" class="text-white hover:text-blue-500">LIEU DE CULTE</a>
-            </nav>
-    
-            <!-- Desktop button -->
-            <div class="hidden md:block">
-                <a href="contact.html" class="customized-bg-blue hover:bg-yellow-100 text-black py-3 px-8 rounded-lg">
-                    CONTACT
-                </a>
-            </div>
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex-shrink-0 -ml-24">
+          <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-16" />
         </div>
-    
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute z-50 left-0 top-full shadow-md">
-            <a href="index.html" class="block py-2 px-4 text-black hover:bg-gray-100">ACCUEIL</a>
-            <a href="our-church.html" class="block py-2 px-4 text-black hover:bg-gray-100">NOTRE EGLISE</a>
-            <a href="daily_bread.html" class="block py-2 px-4 text-black hover:bg-gray-100">PAIN DU JOUR</a>
-            <a href="section.html" class="block py-2 px-4 text-black hover:bg-gray-100">SECTION</a>
-            <a href="place_of_worship.html" class="block py-2 px-4 text-black hover:bg-gray-100">LIEU DE CULTE</a>
-            <a href="contact.html" class="block py-2 px-4 text-blue-500 hover:bg-yellow-200">CONTACT</a>
+
+        <!-- Hamburger -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-white hover:text-blue-500"
+            >ACCUEIL</a
+          >
+          <a href="our-church.html" class="text-white hover:text-blue-500"
+            >NOTRE EGLISE</a
+          >
+          <a href="daily_bread.html" class="text-white hover:text-blue-500"
+            >PAIN DU JOUR</a
+          >
+          <a href="section.html" class="text-white hover:text-blue-500"
+            >SECTION</a
+          >
+          <a href="place_of_worship.html" class="text-blue-500"
+            >LIEU DE CULTE</a
+          >
+        </nav>
+
+        <!-- Desktop button -->
+        <div class="hidden md:block">
+          <a
+            href="contact.html"
+            class="customized-bg-blue hover:bg-yellow-100 text-black py-3 px-8 rounded-lg"
+          >
+            CONTACT
+          </a>
         </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white w-full absolute z-50 left-0 top-full shadow-md"
+      >
+        <a
+          href="index.html"
+          class="block py-2 px-4 text-black hover:bg-gray-100"
+          >ACCUEIL</a
+        >
+        <a
+          href="our-church.html"
+          class="block py-2 px-4 text-black hover:bg-gray-100"
+          >NOTRE EGLISE</a
+        >
+        <a
+          href="daily_bread.html"
+          class="block py-2 px-4 text-black hover:bg-gray-100"
+          >PAIN DU JOUR</a
+        >
+        <a
+          href="section.html"
+          class="block py-2 px-4 text-black hover:bg-gray-100"
+          >SECTION</a
+        >
+        <a
+          href="place_of_worship.html"
+          class="block py-2 px-4 text-black hover:bg-gray-100"
+          >LIEU DE CULTE</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 px-4 text-blue-500 hover:bg-yellow-200"
+          >CONTACT</a
+        >
+      </div>
     </header>
 
     <main class="">
-            <!-- Section 1 -->
-            <section class="relative bg-cover bg-center py-16 md:py-24" style="background-image: url('assets/images/sermon_header.png');">
-                <div class="relative z-10 flex items-start justify-start h-full p-8 md:p-16 mt-[-32px]">
-                    <div class="text-gray-800 font-bold">
-                        <p class="text-sm uppercase tracking-widest mb-2 opacity-80">Toerana</p>
-                        <h1 class="text-4xl md:text-6xl font-bold">LIEU DE CULTE</h1>
-                    </div>
-                </div>
-            </section>
-            <!-- Section 2 -->
-            <section
-                class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 px-4 md:px-8 lg:px-16 py-10 bg-white items-stretch"
-                style="margin-left: 5%; margin-right: 5%;"
+      <!-- Section 1 -->
+      <section
+        style="background-image: url('assets/images/sermon.webp')"
+        class="relative bg-cover bg-top py-20 lg:h-[70vh]"
+      >
+        <div
+          class="container mx-auto lg:h-full flex flex-col justify-center px-4 relative z-10"
+        >
+          <div class="max-w-lg ml-3 lg:ml-10">
+            <p class="text-sm lg:text-md tracking-widest mb-1">TOERANA</p>
+            <h1
+              class="text-3xl lg:text-5xl font-bold mb-20 leading-10 lg:leading-16"
+            >
+              LIEU DE CULTE
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2 -->
+      <section
+        class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 px-4 md:px-8 lg:px-16 py-10 bg-white items-stretch"
+        style="margin-left: 5%; margin-right: 5%"
+      >
+        <div class="md:col-span-12 lg:col-span-12 text-center mb-6">
+          <p class="text-gray-700 tracking-wide uppercase text-sm">TOERANA</p>
+          <h1 class="text-4xl font-bold mt-2 mb-16">PROCHAIN LIEU DE CULTE</h1>
+        </div>
+
+        <div class="md:col-span-4 lg:col-span-4 h-full flex flex-col">
+          <div
+            class="customized-bg-yellow-1 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 h-full flex flex-col justify-between"
+          >
+            <div class="flex justify-end mb-4">
+              <div class="flex items-center gap-1">
+                <span class="text-3xl font-bold">20</span>
+                <span class="text-xs uppercase text-gray-600">AVRIL</span>
+              </div>
+            </div>
+
+            <div>
+              <p
+                class="customized-text-yellow-3 text-xs uppercase font-semibold"
+              >
+                FJKM FOIBE
+              </p>
+              <h2 class="text-xl font-bold uppercase my-5">FJKM WAGNER</h2>
+              <p class="text-sm text-gray-600 mb-12">
+                Dimanche des Rameaux STK anaio
+              </p>
+              <p
+                class="text-sm text-gray-700 font-medium mb-4"
+                style="margin-left: 10%"
+              >
+                DIMANCHE · 16H
+              </p>
+
+              <div class="flex items-start space-x-3 text-sm">
+                <span class="material-symbols-outlined text-amber-700 mt-0.5">
+                  <svg
+                    width="20"
+                    height="26"
+                    viewBox="0 0 20 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      x1="10.2271"
+                      y1="19.4219"
+                      x2="10.2271"
+                      y2="25.375"
+                      stroke="#161722"
+                      stroke-width="1.5"
+                    />
+                    <rect
+                      x="1.68799"
+                      y="1.32031"
+                      width="17.4755"
+                      height="18.3438"
+                      rx="8.73775"
+                      stroke="#161722"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </span>
+                <p class="text-gray-700">
+                  7 BIS RUE PASTEUR<br />
+                  WAGNER 75011
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="md:col-span-8 lg:col-span-8 overflow-hidden hover:shadow-lg transition-all duration-300 h-full"
+        >
+          <img
+            src="assets/images/place_of_worship_header.png"
+            alt="Church organ"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+      </section>
+      <!-- Section 3 -->
+      <section
+        class="px-4 md:px-12 py-12"
+        style="margin-left: 5%; margin-right: 5%"
+      >
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 uppercase">
+            Lieu de culte
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
+          <div class="customized-bg-yellow-1 p-8">
+            <p
+              class="text-xs uppercase customized-text-yellow-3 font-bold mb-2"
+            >
+              Accès
+            </p>
+            <h3 class="text-xl font-bold text-gray-900 mb-1">
+              En transport en commun
+            </h3>
+            <p class="text-gray-700 mb-6">Lalana</p>
+
+            <div class="flex items-center space-x-3 mb-3">
+              <div class="flex items-center">
+                <span class="text-sm text-gray-800"
+                  >Arrêt : Bastille sortie : 9</span
                 >
-                <div class="md:col-span-12 lg:col-span-12 text-center mb-6">
-                    <p class="text-gray-700 tracking-wide uppercase text-sm">TOERANA</p>
-                    <h1 class="text-4xl font-bold mt-2 mb-16">PROCHAIN LIEU DE CULTE</h1>
-                </div>
-
-                <div class="md:col-span-4 lg:col-span-4 h-full flex flex-col">
-                    <div
-                    class="customized-bg-yellow-1 p-6 rounded-lg hover:shadow-md transition-shadow duration-300 h-full flex flex-col justify-between"
-                    >
-                    <div class="flex justify-end mb-4">
-                        <div class="flex items-center gap-1">
-                        <span class="text-3xl font-bold">20</span>
-                        <span class="text-xs uppercase text-gray-600">AVRIL</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="customized-text-yellow-3 text-xs uppercase font-semibold">FJKM FOIBE</p>
-                        <h2 class="text-xl font-bold uppercase my-5">FJKM WAGNER</h2>
-                        <p class="text-sm text-gray-600 mb-12">Dimanche des Rameaux STK anaio</p>
-                        <p class="text-sm text-gray-700 font-medium mb-4" style="margin-left: 10%;">DIMANCHE · 16H</p>
-
-                        <div class="flex items-start space-x-3 text-sm">
-                        <span class="material-symbols-outlined text-amber-700 mt-0.5">
-                            <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="10.2271" y1="19.4219" x2="10.2271" y2="25.375" stroke="#161722" stroke-width="1.5" />
-                            <rect x="1.68799" y="1.32031" width="17.4755" height="18.3438" rx="8.73775" stroke="#161722" stroke-width="1.5" />
-                            </svg>
-                        </span>
-                        <p class="text-gray-700">
-                            7 BIS RUE PASTEUR<br />
-                            WAGNER 75011
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-8 lg:col-span-8 overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
-                    <img
-                    src="assets/images/place_of_worship_header.png"
-                    alt="Church organ"
-                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                    />
-                </div>
-                </section>
-                <!-- Section 3 -->
-                 <section 
-                    class="px-4 md:px-12 py-12"
-                    style="margin-left: 5%; margin-right: 5%;"
-                 >
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 uppercase">Lieu de culte</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
-                    <div class="customized-bg-yellow-1 p-8">
-                    <p class="text-xs uppercase customized-text-yellow-3 font-bold mb-2">Accès</p>
-                    <h3 class="text-xl font-bold text-gray-900 mb-1">En transport en commun</h3>
-                    <p class="text-gray-700 mb-6">Lalana</p>
-
-                    <div class="flex items-center space-x-3 mb-3">
-                        <div class="flex items-center">
-                        <span class="text-sm text-gray-800">Arrêt : Bastille sortie : 9</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <div class="flex items-center">
-                        <span class="text-sm text-gray-800">Arrêt : Bréguet-Sabin sortie : 2</span>
-                        </div>
-                    </div>
-                    </div>
-                    <div>
-                    <img
-                        src="assets/images/gps_plan.jpg"
-                        alt="Carte Lieu de Culte"
-                        class="w-full h-auto rounded-lg shadow-lg"
-                    />
-                    </div>
-                </div>
-        </section>
-
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="flex items-center">
+                <span class="text-sm text-gray-800"
+                  >Arrêt : Bréguet-Sabin sortie : 2</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <div id="map" class="w-full h-96 md:h-52 rounded-lg shadow-lg"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
-   <footer class="customized-bg-gray text-white py-8">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="customized-bg-gray text-white py-8">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Colonne gauche -->
         <div>
-            <img src="assets/images/logo-fjkm.png" alt="Logo" class="h-12 mb-4">
-            <p class="text-sm text-gray-300">© COPYRIGHT ANTHONY</p>
-            <p class="text-sm text-gray-300">2025</p>
-            <p class="text-sm text-gray-300 mt-2">(+33) 6.70.56.66.96</p>
-            <p class="text-sm text-gray-300">7 BIS RUE PASTEUR WAGNER 75011</p>
-            <p class="text-sm text-gray-300">YVESRAHOLIARISON@GMAIL.COM</p>
+          <img
+            src="assets/images/logo-fjkm.png"
+            alt="Logo"
+            class="h-12 mb-4 -ml-16"
+          />
+          <p class="text-sm text-gray-300">© COPYRIGHT ANTHONY</p>
+          <p class="text-sm text-gray-300">2025</p>
+          <p class="text-sm text-gray-300 mt-2">(+33) 6.70.56.66.96</p>
+          <p class="text-sm text-gray-300">7 BIS RUE PASTEUR WAGNER 75011</p>
+          <p class="text-sm text-gray-300">YVESRAHOLIARISON@GMAIL.COM</p>
         </div>
 
         <!-- Colonne centre (2 blocs imbriqués) -->
         <div class="flex flex-col md:flex-row gap-8">
-            <!-- Lien rapide -->
-            <div>
-                <h3 class="text-lg mb-2">Lien Rapide</h3>
-                <ul class="list-none space-y-2">
-                    <li><a href="our-church.html" class="text-gray-400 hover:text-white">NOTRE EGLISE</a></li>
-                    <li><a href="section.html" class="text-gray-400 hover:text-white">SECTIONS</a></li>
-                    <li><a href="daily_bread.html" class="text-gray-400 hover:text-white">PAIN DU JOUR</a></li>
-                    <li><a href="contact.html" class="text-gray-400 hover:text-white">CONTACT</a></li>
-                </ul>
-            </div>
+          <!-- Lien rapide -->
+          <div>
+            <h3 class="text-lg mb-2">Lien Rapide</h3>
+            <ul class="list-none space-y-2">
+              <li>
+                <a href="our-church.html" class="text-gray-400 hover:text-white"
+                  >NOTRE EGLISE</a
+                >
+              </li>
+              <li>
+                <a href="section.html" class="text-gray-400 hover:text-white"
+                  >SECTIONS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="daily_bread.html"
+                  class="text-gray-400 hover:text-white"
+                  >PAIN DU JOUR</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </div>
 
-            <!-- Réseaux sociaux -->
-            <div>
-                <h3 class="text-md mb-2">Connect</h3>
-                <div class="flex items-center">
-                    <a href="#" class="text-gray-300 hover:text-white">
-                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.36 8C15.36 3.58172 11.9215 0 7.68 0C3.43845 0 0 3.58172 0 8C0 11.993 2.80845 15.3027 6.48 15.9028V10.3125H4.53V8H6.48V6.2375C6.48 4.2325 7.6266 3.125 9.38085 3.125C10.2208 3.125 11.1 3.28125 11.1 3.28125V5.25H10.1316C9.1776 5.25 8.88 5.86672 8.88 6.5V8H11.01L10.6695 10.3125H8.88V15.9028C12.5515 15.3027 15.36 11.993 15.36 8Z" fill="#A4DCFF"/>
-                        </svg>
-                    </a>
-                </div>
+          <!-- Réseaux sociaux -->
+          <div>
+            <h3 class="text-md mb-2">Connect</h3>
+            <div class="flex items-center">
+              <a href="#" class="text-gray-300 hover:text-white">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.36 8C15.36 3.58172 11.9215 0 7.68 0C3.43845 0 0 3.58172 0 8C0 11.993 2.80845 15.3027 6.48 15.9028V10.3125H4.53V8H6.48V6.2375C6.48 4.2325 7.6266 3.125 9.38085 3.125C10.2208 3.125 11.1 3.28125 11.1 3.28125V5.25H10.1316C9.1776 5.25 8.88 5.86672 8.88 6.5V8H11.01L10.6695 10.3125H8.88V15.9028C12.5515 15.3027 15.36 11.993 15.36 8Z"
+                    fill="#A4DCFF"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
         </div>
 
         <!-- Colonne droite -->
         <div>
-            <h3 class="text-xl font-semibold mb-5">SOUSCRIRE AUX <br> NEWSLETTER</h3>
-            <form class="flex flex-col sm:flex-row gap-2">
-                <input 
-                    type="email" 
-                    class="bg-transparent text-white rounded-md border border-gray-700 py-4 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-300" 
-                    placeholder="your@email.com"
-                />
-                <button class="btn-primary btn-primary-sm">
-                    S'ABONNER
-                </button>
-            </form>
+          <h3 class="text-xl font-semibold mb-5">
+            SOUSCRIRE AUX <br />
+            NEWSLETTER
+          </h3>
+          <form class="flex flex-col sm:flex-row gap-2">
+            <input
+              type="email"
+              class="bg-transparent text-white rounded-md border border-gray-700 py-4 px-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-gray-300"
+              placeholder="your@email.com"
+            />
+            <button class="btn-primary btn-primary-sm">S'ABONNER</button>
+          </form>
         </div>
-    </div>
-</footer>
-
+      </div>
+    </footer>
     <script src="assets/js/main.js"></script>
-
-</body>
+  </body>
 </html>
