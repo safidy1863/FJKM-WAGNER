@@ -67,8 +67,8 @@
 }
 
 /* Card styles */
-.card {
-    transform: hover:scale-105;
+.card:hover {
+    transform: scale-105;
     transition-transform: duration-300;
 }
 

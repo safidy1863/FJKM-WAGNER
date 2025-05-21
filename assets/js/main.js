@@ -29,4 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'scale(1)';
         });
     });
-}); 
+});
+
+var map = L.map('map').setView([48.862725, 2.287592], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
+
+var marker = L.marker([48.862725, 2.287592]).addTo(map);
+
+var circle = L.circle([48.862725, 2.287592], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
